@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover inspiring quotes and share your own."
+    />
+    <title>Daily Inspiration | Quote Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="config.js"></script>
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="page-header">
+        <p class="eyebrow">A MOMENT OF INSPIRATION</p>
+        <h1>Quote Generator</h1>
+        <p class="intro">
+          A little wisdom can change your whole day.
+        </p>
+      </header>
+
+      <section class="quote-card" aria-labelledby="quote-heading">
+        <h2 id="quote-heading" class="visually-hidden">
+          Your inspirational quote
+        </h2>
+
+        <span class="quote-mark" aria-hidden="true">“</span>
+        <blockquote id="quote-text" aria-live="polite">
+          Loading your inspiration...
+        </blockquote>
+        <p id="quote-author" class="author"></p>
+
+        <button id="next-quote-btn" type="button">
+          Discover another quote
+        </button>
+      </section>
+
+      <section class="add-section" aria-labelledby="add-heading">
+        <h2 id="add-heading">Share your wisdom</h2>
+        <p class="section-description">
+          Add a favourite quote for others to discover.
+        </p>
+
+        <form id="add-quote-form">
+          <div class="form-field">
+            <label for="new-quote">Your quote</label>
+            <textarea
+              id="new-quote"
+              name="quote"
+              rows="3"
+              maxlength="1000"
+              placeholder="What inspires you?"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-field">
+            <label for="new-author">Author</label>
+            <input
+              id="new-author"
+              name="author"
+              type="text"
+              maxlength="200"
+              placeholder="Who said it?"
+              required
+            />
+          </div>
+
+          <button id="add-quote-btn" type="submit">
+            Add my quote
+          </button>
+
+          <p id="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <footer>
+        <p>Pause. Reflect. Keep growing.</p>
+      </footer>
+    </main>
+  </body>
+</html>
